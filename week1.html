@@ -1,0 +1,49 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function setName(){
+            console.log('Before');
+            
+            var click = document.getElementById("nameInput");
+            var clickInput=click.value;
+            console.log('name');
+            document.getElementById('greeting').innerHTML =  "Hey" + clickInput;
+        }
+    </script>
+</head>
+<body> 
+    <h1><span id="greeeting">Welcome to comp-125!</span></h1>
+    <p>What's your name, Future coder?</p>
+    <input type="text" id="nameInput">
+    <button onclick = "setName()">Show me the fun!</button>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function setName(){
+            var name = document.getElementById("name");
+            var input = document.getElementById("inputed");
+            console.log(name);
+            name.innerHTML = "hey " + input.value;
+        }
+    </script>
+</head>
+<body>
+    <h1 ><span id="name"></span> Welcome to COMP-125 ! Get Ready to learn Javascript </h1>
+    <p>What your name , future coder?</p>
+    <input type="text" id="inputed" value=" Jainam">
+    <button onclick="setName();"  >Show me the fun!</button>
+    
+</body>
+</html>

@@ -1,0 +1,613 @@
+<!--
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Your Dashboard</title>
+</head>
+
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Your Dashboard</h1>
+        </header>
+        <section id="charts">
+            <div id="barChart" class="chart"></div>
+            <div id="doughnutChart" class="chart"></div>
+        </section>
+        <section id="data-table">
+            
+        </section>
+        <section id="controls">
+            
+        </section>
+        <footer>
+            <p>© 2024 Your Company</p>
+        </footer>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard with Chart.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+        canvas {
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    
+    <div>
+        <canvas id="myChart" width="400" height="200"></canvas>
+    </div>
+
+    <script>
+        // Sample data for the line chart
+        var data = {
+            labels: ['January', 'February', 'March', 'April', 'May'],
+            datasets: [{
+                label: 'Monthly Sales',
+                data: [50, 120, 200, 150, 300],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 2
+            }]
+        };
+
+        // Chart configuration
+        var config = {
+            type: 'line',
+            data: data,
+            options: {
+                scales: {
+                    x: {
+                        type: 'category',
+                        labels: data.labels
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        // Create a line chart
+        var myChart = new Chart(document.getElementById('myChart'), config);
+    </script>
+</body>
+</html>
+
+-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard with Chart.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+        canvas {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    
+    <div>
+        <canvas id="lineChart" width="400" height="200"></canvas>
+    </div>
+
+    <div>
+        <canvas id="barChart" width="400" height="200"></canvas>
+    </div>
+
+    <script>
+        // Sample data for the line chart
+        var lineChartData = {
+            labels: ['January', 'February', 'March', 'April', 'May'],
+            datasets: [{
+                label: 'Dysmenorrhea occur',
+                data: [50, 120, 200, 150, 300],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 2
+            }]
+        };
+
+        // Chart configuration for the line chart
+        var lineChartConfig = {
+            type: 'line',
+            data: lineChartData,
+            options: {
+                scales: {
+                    x: {
+                        type: 'category',
+                        labels: lineChartData.labels
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        // Sample data for the bar chart
+        var barChartData = {
+            labels: ['January', 'February', 'March', 'April', 'May'],
+            datasets: [{
+                label: 'Lower back pain',
+                data: [100, 150, 80, 200, 120],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 2
+            }]
+        };
+
+        // Chart configuration for the bar chart
+        var barChartConfig = {
+            type: 'bar',
+            data: barChartData,
+            options: {
+                scales: {
+                    x: {
+                        type: 'category',
+                        labels: barChartData.labels
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        // Create line chart
+        var lineChart = new Chart(document.getElementById('lineChart'), lineChartConfig);
+
+        // Create bar chart
+        var barChart = new Chart(document.getElementById('barChart'), barChartConfig);
+    </script>
+</body>
+</html>
+-->
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #34db4d76, #2c502d6a); /* Updated background gradient */
+    color: #000000;
+}
+
+        nav {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #ffd700;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        canvas {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 600; /* Adjusted width */
+            max-width: 900px; /* Added max-width */
+            transition: transform 0.3s ease-in-out;
+        }
+        .chart-details {
+            box-sizing: border-box;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .chart-details:hover,
+        canvas:hover {
+            transform: scale(1.05);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#line-chart">Line Chart</a>
+        <a href="#bar-chart">Bar Chart</a>
+    </nav>
+
+    <h1>Interactive Dashboard</h1>
+
+    <div class="container" id="line-chart">
+        <div class="chart-details">
+            <h2>Line Chart</h2>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem rem laboriosam deserunt ea in quia minima sequi voluptatum rerum inventore eaque dolores, deleniti voluptates nulla quibusdam ducimus impedit pariatur explicabo?
+        </div>
+        <canvas id="lineChart" height="150"></canvas>
+    </div>
+
+    <div class="container" id="bar-chart">
+        <div class="chart-details">
+            <h2>Bar Chart</h2>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae autem quos sint corporis assumenda nostrum repudiandae nemo, nesciunt repellendus rem consequuntur magnam illum natus facere necessitatibus sed iusto? Suscipit, repellat.
+        </div>
+        <canvas id="barChart" height="150"></canvas>
+    </div>
+
+    <script>
+        // Sample data for the line chart
+        var lineChartData = {
+            labels: ['January', 'February', 'March', 'April', 'May'],
+            datasets: [{
+                label: 'Dysmenorrhea occur',
+                data: [50, 60, 200, 150, 300],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 2
+            }]
+        };
+
+        // Chart configuration for the line chart
+        var lineChartConfig = {
+            type: 'line',
+            data: lineChartData,
+            options: {
+                scales: {
+                    x: {
+                        type: 'category',
+                        labels: lineChartData.labels
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        // Sample data for the bar chart
+        var barChartData = {
+            labels: ['Product A', 'Product B', 'Product C', 'Product D', 'Product E'],
+            datasets: [{
+                label: 'Lower Back Pain',
+                data: [100, 150, 80, 200, 120],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 2
+            }]
+        };
+
+        // Chart configuration for the bar chart
+        var barChartConfig = {
+            type: 'bar',
+            data: barChartData,
+            options: {
+                scales: {
+                    x: {
+                        type: 'category',
+                        labels: barChartData.labels
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        // Create line chart
+        var lineChart = new Chart(document.getElementById('lineChart'), lineChartConfig);
+
+        // Create bar chart
+        var barChart = new Chart(document.getElementById('barChart'), barChartConfig);
+    </script>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: #000000;
+}
+        nav {
+            background-color: #333;
+            padding: 15px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        nav a:hover {
+            color: #ffd700;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        canvas {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 600px;
+            max-width: 900px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .chart-details {
+            box-sizing: border-box;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .chart-details:hover,
+        canvas:hover {
+            transform: scale(1.05);
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+        }
+        .recommendation-box {
+            background-color: #333;
+            color: #ffd700;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .chart-row {
+            display: flex;
+            gap: 20px;
+        }
+        .pie-chart-container,
+        .speedometer-container {
+            flex: 1;
+        }
+        .speedometer-container {
+            background: none;
+            border: none;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#line-chart">Line Chart</a>
+        <a href="#bar-chart">Bar Chart</a>
+        <a href="#pie-chart">Pie Chart</a>
+        <a href="#speedometer">Speedometer</a>
+    </nav>
+
+    <h1>Interactive Dashboard</h1>
+
+    <div class="recommendation-box">
+        <h2>Recommendations</h2>
+        <p>Explore the charts to identify trends and patterns in your data.</p>
+        <p>Consider adjusting the time range to get a more detailed view.</p>
+        <p>Use the information to make informed decisions for your business.</p>
+    </div>
+
+    <div class="container" id="line-chart">
+        <div class="chart-details">
+            <h2>Line Chart</h2>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem rem laboriosam deserunt ea in quia minima sequi voluptatum rerum inventore eaque dolores, deleniti voluptates nulla quibusdam ducimus impedit pariatur explicabo?
+        </div>
+        <canvas id="lineChart" height="150"></canvas>
+    </div>
+
+    <div class="container" id="bar-chart">
+        <div class="chart-details">
+            <h2>Bar Chart</h2>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae autem quos sint corporis assumenda nostrum repudiandae nemo, nesciunt repellendus rem consequuntur magnam illum natus facere necessitatibus sed iusto? Suscipit, repellat.
+        </div>
+        <canvas id="barChart" height="150"></canvas>
+    </div>
+
+    <div class="chart-row">
+        <div class="container" id="pie-chart" class="pie-chart-container">
+            <div class="chart-details">
+                <h2>Pie Chart</h2>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae autem quos sint corporis assumenda nostrum repudiandae nemo, nesciunt repellendus rem consequuntur magnam illum natus facere necessitatibus sed iusto? Suscipit, repellat.
+            </div>
+            <div class="pie-chart-container">
+                <canvas id="pieChart" height="150"></canvas>
+            </div>
+        </div>
+
+        <div class="container" id="speedometer" class="speedometer-container">
+            <div class="chart-details">
+                <h2>Speedometer</h2>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae autem quos sint corporis assumenda nostrum repudiandae nemo, nesciunt repellendus rem consequuntur magnam illum natus facere necessitatibus sed iusto? Suscipit, repellat.
+            </div>
+            <div class="speedometer-container">
+                <!-- Empty container for the speedometer -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sample data for the line chart
+        var lineChartData = {
+            labels: ['January', 'February', 'March', 'April', 'May'],
+            datasets: [{
+                label: 'Dysmenorrhea occur',
+                data: [50, 120, 200, 150, 300],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 2
+            }]
+        };
+
+        // Chart configuration for the line chart
+        var lineChartConfig = {
+            type: 'line',
+            data: lineChartData,
+            options: {
+                scales: {
+                    x: {
+                        type: 'category',
+                        labels: lineChartData.labels
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        // Sample data for the bar chart
+        var barChartData = {
+            labels: ['Product A', 'Product B', 'Product C', 'Product D', 'Product E'],
+            datasets: [{
+                label: 'Lower Back Pain',
+                data: [100, 150, 80, 200, 120],
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 2
+            }]
+        };
+
+        // Chart configuration for the bar chart
+        var barChartConfig = {
+            type: 'bar',
+            data: barChartData,
+            options: {
+                scales: {
+                    x: {
+                        type: 'category',
+                        labels: barChartData.labels
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        // Sample data for the pie chart
+        var pieChartData = {
+            labels: ['Category A', 'Category B', 'Category C', 'Category D', 'Category E'],
+            datasets: [{
+                data: [20, 30, 15, 10, 25],
+                backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4CAF50', '#FF9800'],
+                hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4CAF50', '#FF9800']
+            }]
+        };
+
+        // Chart configuration for the pie chart
+        var pieChartConfig = {
+            type: 'pie',
+            data: pieChartData
+        };
+
+        // Sample data for the speedometer chart
+        var speedometerChartData = {
+            labels: ['Speed'],
+            datasets: [{
+                data: [70],
+                backgroundColor: '#4CAF50',
+                borderColor: '#4CAF50'
+            }]
+        };
+
+        // Chart configuration for the speedometer chart
+        var speedometerChartConfig = {
+            type: 'doughnut',
+            data: speedometerChartData,
+            options: {
+                rotation: 1 * Math.PI,
+                circumference: 1 * Math.PI,
+                cutout: '75%',
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        };
+
+        // Create line chart
+        var lineChart = new Chart(document.getElementById('lineChart'), lineChartConfig);
+
+        // Create bar chart
+        var barChart = new Chart(document.getElementById('barChart'), barChartConfig);
+
+        // Create pie chart
+        var pieChart = new Chart(document.getElementById('pieChart'), pieChartConfig);
+
+        // Create speedometer chart
+        var speedometerChart = new Chart(document.getElementById('speedometerChart'), speedometerChartConfig);
+    </script>
+</body>
+</html>
